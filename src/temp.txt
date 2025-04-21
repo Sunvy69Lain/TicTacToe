@@ -1,0 +1,112 @@
+#define X_turn false
+#define O_turn true
+bool Turns[2] = {X_turn, O_turn};
+bool currentTurn;
+
+bool Occupied[3][3] = {{false, false, false}, {false, false, false}, {false, false, false}};
+
+
+
+
+           if (IsKeyPressed(KEY_T))
+            {
+                currentTurn = !currentTurn;
+            }
+
+            if (currentTurn == X_turn)
+            {
+                if (IsKeyDown(KEY_KP_7) || player.buildX00.IsBuilt)
+                {
+                    player.buildX00.IsBuilt = true;
+                    player.DrawXindex00();
+                }
+                if (IsKeyDown(KEY_KP_8) || player.buildX01.IsBuilt)
+                {
+                    player.buildX01.IsBuilt = true;
+                    player.DrawXindex01();
+                }
+                if (IsKeyDown(KEY_KP_9) || player.buildX02.IsBuilt)
+                {
+                    player.buildX02.IsBuilt = true;
+                    player.DrawXindex02();
+                }
+                if (IsKeyDown(KEY_KP_4) || player.buildX10.IsBuilt)
+                {
+                    player.buildX10.IsBuilt = true;
+                    player.DrawXindex10();
+                }
+                if (IsKeyDown(KEY_KP_5) || player.buildX11.IsBuilt)
+                {
+                    player.buildX11.IsBuilt = true;
+                    player.DrawXindex11();
+                }
+                if (IsKeyDown(KEY_KP_6) || player.buildX12.IsBuilt)
+                {
+                    player.buildX12.IsBuilt = true;
+                    player.DrawXindex12();
+                }
+                if (IsKeyDown(KEY_KP_1) || player.buildX20.IsBuilt)
+                {
+                    player.buildX20.IsBuilt = true;
+                    player.DrawXindex20();
+                }
+                if (IsKeyDown(KEY_KP_2) || player.buildX21.IsBuilt)
+                {
+                    player.buildX21.IsBuilt = true;
+                    player.DrawXindex21();
+                }
+                if (IsKeyDown(KEY_KP_3) || player.buildX22.IsBuilt)
+                {
+                    player.buildX22.IsBuilt = true;
+                    player.DrawXindex22();
+                }
+            }
+            else if (currentTurn == O_turn)
+            {
+                // Testing O:
+                if (IsKeyDown(KEY_Q) || player.buildO00.IsBuilt)
+                {
+                    player.buildO00.IsBuilt = true;
+                    player.DrawOindex00();
+                }
+                if (IsKeyDown(KEY_W) || player.buildO01.IsBuilt)
+                {
+                    player.buildO01.IsBuilt = true;
+                    player.DrawOindex01();
+                }
+                if (IsKeyDown(KEY_E) || player.buildO02.IsBuilt)
+                {
+                    player.buildO02.IsBuilt = true;
+                    player.DrawOindex02();
+                }
+                if (IsKeyDown(KEY_A) || player.buildO10.IsBuilt)
+                {
+                    player.buildO10.IsBuilt = true;
+                    player.DrawOindex10();
+                }
+                if (IsKeyDown(KEY_S) || player.buildO11.IsBuilt)
+                {
+                    player.buildO11.IsBuilt = true;
+                    player.DrawOindex11();
+                }
+                if (IsKeyDown(KEY_D) || player.buildO12.IsBuilt)
+                {
+                    player.buildO12.IsBuilt = true;
+                    player.DrawOindex12();
+                }
+                if (IsKeyDown(KEY_Z) || player.buildO20.IsBuilt)
+                {
+                    player.buildO20.IsBuilt = true;
+                    player.DrawOindex20();
+                }
+                if (IsKeyDown(KEY_X) || player.buildO21.IsBuilt)
+                {
+                    player.buildO21.IsBuilt = true;
+                    player.DrawOindex21();
+                }
+                if (IsKeyDown(KEY_C) || player.buildO22.IsBuilt)
+                {
+                    player.buildO22.IsBuilt = true;
+                    player.DrawOindex22();
+                }
+            }
